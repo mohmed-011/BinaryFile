@@ -21,6 +21,7 @@ namespace BinaryFile
         private void button1_Click(object sender, EventArgs e)
         {
             BinaryReader br = new BinaryReader(File.Open(Info.FileName, FileMode.Open, FileAccess.Read));
+
             int num_of_records = (int)br.BaseStream.Length / Info.RecordSize;
            
             if (num_of_records > 0) // If The file Not Empty
@@ -28,7 +29,6 @@ namespace BinaryFile
                 DisplayBtn.Text = "Next";// Change the Button Text
 
                 br.BaseStream.Seek(Info.Count, SeekOrigin.Begin);
-
 
                 IDBox.Text = br.ReadInt32().ToString();
                 NameBox.Text = br.ReadString(); 

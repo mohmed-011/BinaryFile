@@ -76,15 +76,14 @@ namespace BinaryFile
 
         private void ModifyBtn_Click(object sender, EventArgs e)
         {
-            foreach (InsertForm.student s in InsertForm.studList)
+            /*  foreach (InsertForm.student s in InsertForm.studList)
             {
                 if (IDBox.Text == s.id.ToString())
                 {
                     InsertForm.studList.RemoveAt(InsertForm.studList.IndexOf(s));
                 }
             }
-            
-
+            */
         }
     }
 }

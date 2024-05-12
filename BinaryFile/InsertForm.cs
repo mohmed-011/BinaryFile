@@ -30,12 +30,14 @@ namespace BinaryFile
             public int year;
             public string gender;
 
+
         };
 
         public static List<student> studList = new List<student>();
         public bool less = false;
         public int current = 0;
         public int length = 0;
+
         public void clearPrint()
         {
            MessageBox.Show("Student is added Successfully", "Done",
@@ -48,33 +50,6 @@ namespace BinaryFile
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*  BinaryWriter bw = new BinaryWriter(File.Open(Info.FileName, FileMode.Open, FileAccess.Write));
-
-              int length = (int)bw.BaseStream.Length;
-
-              if(length != 0 )
-              {
-                  bw.BaseStream.Seek(length, SeekOrigin.Begin );
-              }
-
-              bw.Write(int.Parse(ID.Text));      //ID
-
-              Namee.Text = Namee.Text.PadRight(9); //Name
-              bw.Write(Namee.Text.Substring(0, 9));
-
-              Tel.Text = Tel.Text.PadRight(11); //Telephon
-              bw.Write(Tel.Text.Substring(0, 11));
-
-              bw.Write(int.Parse(Year.Text));    //Year
-
-              bw.Write(Gender.Text.Substring(0, 1)); //Gender
-
-              ID.Clear(); Namee.Clear(); Tel.Clear(); Year.Clear(); Gender.Clear();
-              bw.Close();
-            */
-
-
-
             if (!studList.Any())
             {
                 MessageBox.Show("Empty List ☹ ", "Oops");
@@ -84,11 +59,6 @@ namespace BinaryFile
                 BinaryWriter bw = new BinaryWriter(File.Open(Info.FileName, FileMode.Open, FileAccess.Write));
 
                 length = (int)bw.BaseStream.Length;
-
-               /* if (length != 0)
-                {
-                    bw.BaseStream.Seek(length, SeekOrigin.Begin);
-                }*/
 
                 foreach (student item in studList)
                 {
@@ -120,6 +90,8 @@ namespace BinaryFile
             new Form1().Show();
         }
 
+
+
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -141,7 +113,6 @@ namespace BinaryFile
 
         else
         { 
-
 
             foreach (student x in studList)
             {

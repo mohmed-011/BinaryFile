@@ -70,6 +70,7 @@
             // 
             // GenderBox
             // 
+            this.GenderBox.Enabled = false;
             this.GenderBox.Location = new System.Drawing.Point(107, 292);
             this.GenderBox.Name = "GenderBox";
             this.GenderBox.Size = new System.Drawing.Size(125, 23);
@@ -86,6 +87,7 @@
             // 
             // YearBox
             // 
+            this.YearBox.Enabled = false;
             this.YearBox.Location = new System.Drawing.Point(107, 253);
             this.YearBox.Name = "YearBox";
             this.YearBox.Size = new System.Drawing.Size(125, 23);
@@ -102,6 +104,7 @@
             // 
             // TelBox
             // 
+            this.TelBox.Enabled = false;
             this.TelBox.Location = new System.Drawing.Point(107, 212);
             this.TelBox.Name = "TelBox";
             this.TelBox.Size = new System.Drawing.Size(125, 23);
@@ -118,6 +121,7 @@
             // 
             // NameBox
             // 
+            this.NameBox.Enabled = false;
             this.NameBox.Location = new System.Drawing.Point(107, 173);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(125, 23);
@@ -134,6 +138,7 @@
             // 
             // IDBox
             // 
+            this.IDBox.Enabled = false;
             this.IDBox.Location = new System.Drawing.Point(107, 133);
             this.IDBox.Name = "IDBox";
             this.IDBox.Size = new System.Drawing.Size(125, 23);

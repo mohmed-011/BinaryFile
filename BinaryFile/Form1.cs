@@ -28,61 +28,15 @@ namespace BinaryFile
         {
             Info.FileName = "D:\\" + FileNameBox.Text + ".txt";
 
-            if(!File.Exists(Info.FileName))
-            {
-                File.CreateText(Info.FileName);
-                MessageBox.Show("File is Created Successfully");
-                
-            }
-            else
+            if(File.Exists(Info.FileName))
             {
                 errorLapel.Visible = true;
             }
-
-            student s;
-
-            BinaryReader br = new BinaryReader(File.Open(Info.FileName, FileMode.Open, FileAccess.Read));
-
-            while (br.BaseStream.Position != br.BaseStream.Length)
+            else
             {
-                s.id = br.ReadInt32();
-                s.name = br.ReadString();
-                s.tel = br.ReadString();
-                s.year = br.ReadInt32();
-                s.gender = br.ReadString();
-
-                if (!studList.Any())
-                {
-                    studList.Add(s);
-                }
-
-                else
-                {
-
-                    foreach (student x in studList)
-                    {
-                        if (s.id < x.id)//check if the id to insert less than the any id saved in list
-
-                        {
-                            current = studList.LastIndexOf(x);//save the index
-                            less = true;
-                            break;
-                        }
-                    }
-                    if (!less)//if the id to insert greater than the last id saved in list
-
-                    {
-                        studList.Add(s);//insert in the end of list
-
-                    }
-                    else
-                    {
-                        studList.Insert(current, s);//insert before current id
-                        less = false;
-                    }
-                }
+                File.CreateText(Info.FileName);
+                MessageBox.Show("File is Created Successfully");
             }
-            br.Close();
 
         }
 
